@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+    <title>Order</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Jimmy's Diner</h1>
+        <h3>The best burgers and pizzas in town</h3>
+	</header>
+    <main>
+        <section id="menu-id">
+        </section>
+        <section id="order" class="show-total">
+            <h2 class="order-headline">Your order</h2>
+        </section>
+        <section id="order-items">
+        </section>
+        <section id="total-price" class="show-total">
+        </section>
+        <section id="purchase-btn" class="show-total">
+            <p>Complete order</p>
+        </section>
+        <section id="pay-section" class="modal">
+            <p class="modal-header">Enter card details</p>
+            <form>
+                <fieldset>
+                    <input class="inputfield" type="text" id="name" name="name" placeholder="Enter your name">
+                    <input class="inputfield" type="tel" id="card" name="card" placeholder="Enter card number" title="Please use the format: 1234123412341234">
+                    <input class="inputfield" type="tel" id="cvv" name="cvv" placeholder="Enter cvv" title="Please use format: 123">
+                    <p id="pay-btn">Pay</p>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <section id="complete-section">
+    </section>
+</body>
+</html>
