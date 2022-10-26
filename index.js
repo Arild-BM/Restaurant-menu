@@ -17,7 +17,7 @@ let orderList = []
 let total = 0
 let displayOrder = false
 
-// Create menu, one line for each item in the menu
+//Create menu, one line for each item in the menu
 menuArray.forEach((e) => {
     menu += `
     <div class="menu-item">
@@ -63,12 +63,24 @@ purchaseBtn.addEventListener("click",function () {
 
 // Listen for click on "PAY"-button
 payBtn.addEventListener("click", function() {
-    paySection.classList.remove("show-pay-section")
-    completeSection.classList.add("show-complete-section")
-    completeSection.innerHTML = `<p>Thanks ${userName.value}! Your order is on its way!</p>`
-    userName.value = ""
-    card.value = ""
-    cvv.value = ""
+    if (userName.value != "" && card.value != "" && cvv.value != "") {
+        paySection.classList.remove("show-pay-section")
+        document.body.style.height = "unset"
+        document.body.style.minHeight = "1148px"
+        completeSection.style.color = '#065F46'
+        completeSection.style.position = 'unset'
+        completeSection.classList.add("show-complete-section")
+        completeSection.innerHTML = `<p>Thanks ${userName.value}! Your order is on its way!</p>`
+        userName.value = ""
+        card.value = ""
+        cvv.value = ""
+    } else {
+        completeSection.style.color = 'red'
+        completeSection.style.position = 'relative'
+        document.body.style.height = "1148px"
+        completeSection.classList.add("show-complete-section")
+        completeSection.innerHTML = "Please fill out the form."
+    }
 })
 
 //Add item user order
